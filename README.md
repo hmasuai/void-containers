@@ -51,7 +51,7 @@ xbps-install qemu-user-static
 ```
 2. Build the image:
 ```sh
-docker build --target "image-<default|full|busybox>" -f Containerfile --build-arg="LIBC=<glibc|musl>" . --tag <yourtag>
+docker buildx build --target "image-<default|full|busybox>" -f Containerfile --build-arg="LIBC=<glibc|musl>" . --tag <yourtag>
 ```
 > Note: To easily build multi-platform images, `docker buildx bake` can be used.
 
